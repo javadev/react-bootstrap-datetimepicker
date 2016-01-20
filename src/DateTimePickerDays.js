@@ -67,8 +67,9 @@ export default class DateTimePickerDays extends Component {
       }
       if ((minDate && prevMonth.isBefore(minDate)) || (maxDate && prevMonth.isAfter(maxDate))) {
         classes.disabled = true;
+      } else if (this.props.daysOfWeekDisabled.length > 0) {
+        classes.disabled = this.props.daysOfWeekDisabled.indexOf(prevMonth.day()) !== -1;
       }
-      if (this.props.daysOfWeekDisabled.length > 0) classes.disabled = this.props.daysOfWeekDisabled.indexOf(prevMonth.day()) !== -1;
       cells.push(<td className={classnames(classes)} key={prevMonth.month() + "-" + prevMonth.date()} onClick={this.props.setSelectedDate}>{prevMonth.date()}</td>);
       if (prevMonth.weekday() === moment().endOf("isoWeek").weekday()) {
         row = <tr key={prevMonth.month() + "-" + prevMonth.date()}>{cells}</tr>;
