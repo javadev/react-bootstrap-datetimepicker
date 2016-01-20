@@ -82,19 +82,19 @@ export default class DateTimePickerDays extends Component {
             </tr>
 
             <tr>
-              <th className="dow">Su</th>
+              <th className="dow">S</th>
 
-              <th className="dow">Mo</th>
+              <th className="dow">M</th>
 
-              <th className="dow">Tu</th>
+              <th className="dow">T</th>
 
-              <th className="dow">We</th>
+              <th className="dow">O</th>
 
-              <th className="dow">Th</th>
+              <th className="dow">T</th>
 
-              <th className="dow">Fr</th>
+              <th className="dow">F</th>
 
-              <th className="dow">Sa</th>
+              <th className="dow">L</th>
             </tr>
           </thead>
 

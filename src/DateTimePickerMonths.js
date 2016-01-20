@@ -12,6 +12,18 @@ export default class DateTimePickerMonths extends Component {
     setViewMonth: PropTypes.func.isRequired
   }
 
+  constructor(props) {
+    super(props);
+    // Setup moment
+    moment.locale("no", {
+      weekdays : ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"],
+      months : ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober",
+        "November", "Desember"],
+      monthsShort : ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des"],
+      weekdaysShort: ["Søn", "Man", "Tir", "Ons", "Tor", "Fre", "Lør"]
+    });
+  }
+
   renderMonths = () => {
     var classes, i, month, months, monthsShort;
     month = this.props.selectedDate.month();
