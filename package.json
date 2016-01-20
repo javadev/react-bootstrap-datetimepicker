@@ -5,7 +5,7 @@
   "homepage": "http://dev.quri.com/react-bootstrap-datetimepicker/",
   "repository": {
     "type": "git",
-    "url": "http://github.com/quri/react-bootstrap-datetimepicker"
+    "url": "http://github.com/javadev/react-bootstrap-datetimepicker"
   },
   "main": "./lib/DateTimeField.js",
   "scripts": {
