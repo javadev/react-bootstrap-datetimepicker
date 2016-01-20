@@ -20,6 +20,18 @@ export default class DateTimePickerDays extends Component {
     showToday: true
   }
 
+  constructor(props) {
+    super(props);
+    // Setup moment
+    moment.locale("no", {
+      weekdays : ["SÃÂ¸ndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "LÃÂ¸rdag"],
+      months : ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober",
+        "November", "Desember"],
+      monthsShort : ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des"],
+      weekdaysShort: ["SÃÂ¸n", "Man", "Tir", "Ons", "Tor", "Fre", "LÃÂ¸r"]
+    });
+  }
+
   renderDays = () => {
     var cells, classes, days, html, month, nextMonth, prevMonth, minDate, maxDate, row, year;
     year = this.props.viewDate.year();
