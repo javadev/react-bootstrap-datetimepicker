@@ -60,7 +60,7 @@ describe("DateTimePickerMonths", function() {
 
     it("rendersJanuary through December", function() {
       const monthList = TestUtils.scryRenderedDOMComponentsWithClass(months, "month");
-      expect(monthList.map((x) => x.textContent)).toEqual(["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Des" ]);
+      expect(monthList.map((x) => x.textContent)).toEqual(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]);
     });
 
     it("has an active month that is now's month", function() {
